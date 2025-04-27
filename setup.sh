@@ -69,6 +69,6 @@ chmod +x build.sh run_qemu.sh
 
 # === Run OS ===
 echo -e "${GREEN}5. Running OS in QEMU...${RESET}"
-./run_qemu.sh ./bin/os.bin
+./run_qemu.sh
 
 echo -e "${GREEN}Setup completed successfully!${RESET}"
