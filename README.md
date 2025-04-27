@@ -6,22 +6,26 @@ This repository contains a setup script to help you get started with [myOwnOS](h
 
 ## What This Script Does
 
-This script (`setup.sh`) automates the following:
+The `setup.sh` script automates the following tasks:
 
 - Updates your system packages.
-- Installs all required dependencies (including QEMU, NASM, build tools, etc.).
+- Installs all required dependencies (build tools, QEMU, NASM, etc.).
 - Builds a cross-compiler toolchain (`i686-elf-gcc` and `binutils`).
 - Clones the `myOwnOS` repository.
 - Builds the OS and runs it using QEMU.
 
 ---
+
 ## Prerequisites
 
-- A Debian-based Linux system (e.g., Ubuntu)
+- A Debian-based Linux system (e.g., Ubuntu, Linux Mint, WSL)
 - ~4GB free disk space
 - Internet connection
 - `sudo` access
 
+---
+
+## Installed Packages
 
 ### Essential Development Tools
 - `build-essential`
@@ -43,14 +47,6 @@ This script (`setup.sh`) automates the following:
 - `qemu-system-x86_64`
 - `gdb`
 
-### Display & Remote Access (Optional)
-- `xauth`
-- `x11-apps`
-- `xrdp`
-
-### Code Analysis (Optional)
-- `cloc` – to count lines of code
-
 ---
 
 ## Getting Started
@@ -65,24 +61,24 @@ This script (`setup.sh`) automates the following:
 2. **Run the script:**
 
    ```bash
-   chmod +x setup.sh
-   ./setup.sh
+   make
    ```
 
-3. **Done!** The script will build the OS and launch it in QEMU.
+3. **Done!**  
+   The script will automatically build `myOwnOS` and launch it in QEMU.
 
 ---
 
 ## Customization
 
-You can modify the toolchain versions inside the script:
+You can easily modify the toolchain versions by editing the variables at the top of the script:
 
 ```bash
 BINUTILS_VERSION=2.35
 GCC_VERSION=10.2.0
 ```
 
-Change these values if you'd like to use different versions.
+Change these values if you'd like to use different versions of `binutils` or `gcc`.
 
 ---
 
