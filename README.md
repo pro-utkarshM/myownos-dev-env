@@ -49,7 +49,12 @@ The `setup.sh` script automates the following tasks:
 
 ---
 
-## Getting Started
+## Getting Started 
+```
+curl -sSf https://raw.githubusercontent.com/pro-utkarshM/myownos-dev-env/main/setup.sh | sudo bash
+```
+
+## Getting Started (build yourself)
 
 1. **Download the setup script:**
 
